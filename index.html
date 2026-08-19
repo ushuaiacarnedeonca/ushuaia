@@ -4,8 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Carne de Onça em Curitiba | Delivery — Ushuaia</title>
-<meta name="description" content="O prato que tem Indicação Geográfica de Curitiba, entregue na sua casa. Quatro versões: tradicional, Ushuaia, vegana e vegetariana, com opção sem glúten.">
-<link rel="icon" href="assets/onca.png" type="image/png">
+<meta name="description" content="O primeiro delivery exclusivo de Carne de Onça de Curitiba. Quatro versões: a Original com Indicação Geográfica, a autoral do Ushuaia Piano Bar, a Vegana e a Sem Glúten.">
+<link rel="icon" href="assets/icone-64.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/icone-180.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ushuaia Carne de Onça — o primeiro delivery exclusivo de Curitiba">
+<meta property="og:description" content="Quatro versões: a Original com Indicação de Procedência, a autoral do Ushuaia Piano Bar, a Vegana e a Sem Glúten.">
+<meta property="og:image" content="https://mktcastro-bit.github.io/ushuaia/assets/compartilhar.jpg">
+<meta property="og:url" content="https://mktcastro-bit.github.io/ushuaia/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=tanker@400&display=swap" rel="stylesheet">
@@ -123,11 +130,23 @@ section{padding:82px 0;border-bottom:1px solid var(--linha)}
 .destaque .corpo{padding:26px 28px 30px;flex:1;display:flex;flex-direction:column;justify-content:center}
 .destaque h3{font-size:34px;margin-bottom:6px;color:#FDF1E2}
 .destaque .ing{color:#DCC6AE;font-size:16px;margin:10px 0 0}
-.selo-ig{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--ouro);
-  border-radius:999px;padding:7px 15px 7px 9px;font-size:11px;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--ouro);font-weight:700;margin-top:20px}
-.selo-ig .mk{width:22px;height:22px;border-radius:50%;border:1px dashed var(--ouro);
-  display:grid;place-items:center;font-size:8px;letter-spacing:0}
+.selo-ig{display:inline-flex;align-items:center;gap:11px;margin-top:20px;
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ouro);font-weight:700}
+.selo-ig img{height:62px;width:auto;flex:0 0 auto}
+.selo-ig span{max-width:15em;line-height:1.35}
+.card .selo-versao{height:44px;width:auto;flex:0 0 auto}
+/* faixa de cartoes-postais: o prato e daqui, e a cidade aparece */
+.postais{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:34px}
+.postais figure{margin:0;border-radius:10px;overflow:hidden;position:relative;
+  box-shadow:0 6px 18px rgba(66,32,10,.16)}
+.postais img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;
+  transition:transform .35s ease}
+.postais figure:hover img{transform:scale(1.06)}
+.postais figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 8px 6px;
+  font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#FBEEDC;font-weight:700;
+  text-align:center;background:linear-gradient(transparent,rgba(20,9,3,.82))}
+@media(max-width:860px){.postais{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.postais{grid-template-columns:repeat(2,1fr)}}
 .trio{display:grid;gap:16px;grid-template-rows:repeat(3,1fr)}
 .card{background:var(--superficie);border:1px solid var(--linha);
   border-radius:14px;padding:22px 24px;transition:border-color .2s,transform .2s,box-shadow .2s;
@@ -170,7 +189,7 @@ section{padding:82px 0;border-bottom:1px solid var(--linha)}
   display:grid;place-items:center;font-family:var(--display);font-size:19px;margin-bottom:14px}
 .passo h4{font-family:var(--display);font-weight:400;font-size:21px;margin:0 0 6px;color:var(--vinho)}
 .passo p{margin:0;color:var(--tinta-fraca);font-size:15px}
-.dados{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--linha-forte);
+.dados{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--linha-forte);
   border:1px solid var(--linha-forte);border-radius:12px;overflow:hidden}
 .dados div{background:var(--superficie);padding:20px 22px}
 .dados dt{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--caramelo);
@@ -182,6 +201,9 @@ section{padding:82px 0;border-bottom:1px solid var(--linha)}
 /* ---------- blog ---------- */
 .posts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .post{text-decoration:none;display:block}
+.post .capa{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;display:block;
+  box-shadow:0 6px 18px rgba(66,32,10,.14);transition:transform .3s ease}
+.post:hover .capa{transform:translateY(-3px)}
 .post h4{font-family:var(--display);font-weight:400;font-size:22px;margin:16px 0 7px;
   line-height:1.15;color:var(--vinho)}
 .post p{margin:0;color:var(--tinta-fraca);font-size:14.5px}
@@ -231,6 +253,23 @@ footer a:hover{color:var(--ouro)}
 .pend{color:var(--caramelo);border-bottom:1px dotted var(--caramelo);cursor:help}
 .destaque .pend,.b2b .pend{color:var(--ouro);border-bottom-color:var(--ouro)}
 
+/* ---------- botao unico de pedido + overlay ---------- */
+.btn-pedir{border:0;cursor:pointer;font-family:inherit;line-height:normal}
+.barra .btn-pedir{width:100%}
+.modal[hidden]{display:none}
+.modal{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:22px}
+.modal-bg{position:absolute;inset:0;background:rgba(20,8,2,.62)}
+.modal-cx{position:relative;width:100%;max-width:420px;background:var(--superficie);
+  border:1px solid var(--linha-forte);border-radius:18px;padding:32px 28px 28px;
+  box-shadow:0 26px 60px rgba(20,8,2,.34);animation:sobe .18s ease-out}
+@keyframes sobe{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.modal-cx h3{font-size:27px;margin-bottom:6px}
+.modal-cx .sub{margin:0 0 20px;color:var(--tinta-fraca);font-size:14.5px}
+.modal-cx .canais-grid{grid-template-columns:1fr;margin-top:0}
+.modal-x{position:absolute;top:10px;right:12px;background:none;border:0;cursor:pointer;
+  font-size:26px;line-height:1;color:var(--tinta-fraca);padding:4px 9px;border-radius:8px}
+.modal-x:hover{color:var(--vinho);background:rgba(126,26,2,.08)}
+
 /* ---------- responsivo ---------- */
 .versoes>*,.ig>*,.cesar>*,.b2b>*,.trio>*,.destaque>*{min-width:0}
 h1,h2,h3,h4,p,dd{overflow-wrap:anywhere}
@@ -242,6 +281,14 @@ h1,h2,h3,h4,p,dd{overflow-wrap:anywhere}
   .sec-t{max-width:none}
   .hero p{max-width:none}
   .hero .texto{max-width:none}
+}
+/* Abaixo de 560px o logo + botao do header nao cabem e empurram a pagina
+   para fora da tela. O CTA some do topo — a barra fixa inferior ja o traz. */
+@media(max-width:560px){
+  header .btn{display:none}
+  header .wrap{gap:0}
+  .marca{min-width:0}
+  .marca img{height:52px;max-width:100%}
 }
 </style>
 </head>
@@ -258,7 +305,7 @@ h1,h2,h3,h4,p,dd{overflow-wrap:anywhere}
       <a href="#cesar">Quem faz</a>
       <a href="#pedir">Como pedir</a>
       <a href="#blog">Blog</a>
-      <a class="btn btn-wa" data-wa="pedido" target="_blank" rel="noopener" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.14-.19.29-.74.93-.9 1.12-.17.19-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.59.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.56-.88-2.13-.23-.55-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.38s1.02 2.76 1.17 2.95c.15.19 2.02 3.08 4.89 4.32.68.29 1.21.47 1.63.6.68.22 1.31.19 1.8.11.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38c1.45.79 3.08 1.21 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.02h-.01c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.25-8.2 8.25z"/></svg>Pedir no WhatsApp</a>
+      <button class="btn btn-pedir" type="button" data-pedir>Fazer pedido</button>
     </nav>
   </div>
 </header>
@@ -268,14 +315,10 @@ h1,h2,h3,h4,p,dd{overflow-wrap:anywhere}
   <div class="wrap">
     <div class="texto">
       <div class="kicker">Delivery em Curitiba</div>
-      <h1>Carne de Onça,<br>entregue na<br>sua casa.</h1>
-      <p>O petisco que é patrimônio da cidade: broa de centeio, carne fresca moída na hora,
-         cebolinha, cebola e tempero. Dez anos no balcão do Ushuaia — agora na sua mesa.</p>
-      <a class="btn btn-wa" data-wa="pedido" target="_blank" rel="noopener" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.14-.19.29-.74.93-.9 1.12-.17.19-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.59.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.56-.88-2.13-.23-.55-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.38s1.02 2.76 1.17 2.95c.15.19 2.02 3.08 4.89 4.32.68.29 1.21.47 1.63.6.68.22 1.31.19 1.8.11.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38c1.45.79 3.08 1.21 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.02h-.01c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.25-8.2 8.25z"/></svg>Pedir no WhatsApp</a>
-      <div class="info">
-        Entrega em <b class="pend">[regiões]</b> · <b class="pend">[dias e horário]</b> ·
-        pedido mínimo <b class="pend">[valor]</b>
-      </div>
+      <h1>O primeiro delivery exclusivo<br>de Carne de Onça<br>de Curitiba</h1>
+      <p>Uma experiência gastronômica autêntica para turistas e moradores
+         descobrirem o sabor mais curitibano da cidade.</p>
+      <button class="btn btn-pedir" type="button" data-pedir>Fazer pedido</button>
     </div>
   </div>
 </div>
@@ -284,43 +327,47 @@ h1,h2,h3,h4,p,dd{overflow-wrap:anywhere}
 <section id="versoes">
   <div class="wrap">
     <h2 class="sec-t">Quatro versões. Porque o prato é da cidade inteira.</h2>
-    <p class="sec-i">Em dez anos de balcão, eu vi muita gente pedir e ter que recusar. Celíaco,
-       vegano, vegetariano. Sempre me incomodou — o prato é de Curitiba, e Curitiba é de todo mundo.
-       Então eu fiz de outro jeito.</p>
+    <p class="sec-i">A tradição curitibana permanece preservada e a receita original é respeitada.
+       Ao mesmo tempo, apresentamos novas alternativas para que pessoas celíacas, vegetarianas e
+       veganas possam vivenciar essa experiência gastronômica.</p>
 
     <div class="versoes">
       <div class="destaque">
         <img class="foto-destaque" src="assets/foto-tradicional-1x1.jpg"
-             alt="A Tradicional — carne de onça sobre broa de centeio, com cebola e cebolinha verde">
+             alt="A Original — carne de onça na broa de centeio, com cebola e cebolete">
         <div class="corpo">
-          <h3>A Tradicional</h3>
-          <p class="ing">Como sempre foi feita: 200 g de carne bovina fresca — patinho —, cebola,
-             cebolinha verde, sal e pimenta do reino. Acompanha broa de centeio, mostarda escura
-             e azeite de oliva.</p>
-          <div class="selo-ig"><span class="mk">SELO</span> Indicação Geográfica de Curitiba</div>
+          <h3>A Original</h3>
+          <p class="ing">200 g de carne fresca de patinho bovina, temperada com sal, cebola e
+             cebolete orgânica, páprica, cachaça e azeite de oliva. Vai na broa de centeio,
+             acompanhada de mostarda escura e azeite de oliva.</p>
+          <div class="selo-ig">
+            <img src="assets/selo-ig.png" alt="Selo Carne de Onça de Curitiba — Indicação de Procedência">
+            <span>Indicação de Procedência<br>Carne de Onça de Curitiba</span>
+          </div>
         </div>
       </div>
 
       <div class="trio">
         <div class="card">
-          <div class="topo"><h3>A Ushuaia</h3></div>
-          <p>200 g de patinho temperado com páprica, sal, azeite de oliva e cachaça orgânica.
-             Acompanha broa de castanha ou centeio, mostarda escura e azeite.</p>
+          <div class="topo"><h3>A Ushuaia</h3><span class="selo-u">Autoral</span></div>
+          <p>200 g de carne fresca de patinho bovina, temperada com sal, cebola e cebolete orgânica,
+             páprica, cachaça e azeite de oliva. Na broa de castanha levemente tostada, com mostarda
+             escura e azeite de oliva.</p>
         </div>
         <div class="card">
-          <div class="topo"><h3>A Vegana</h3><span class="selo-u">Ushuaia</span></div>
-          <p>200 g de proteína 100% vegetal com o mesmo tempero da casa — páprica, sal, azeite
-             e cachaça orgânica. Acompanha broa de castanha ou centeio, mostarda escura e azeite.
-             Sem nenhum ingrediente de origem animal.</p>
+          <div class="topo"><h3>A Vegana</h3><img class="selo-versao" src="assets/selo-vegano.png" alt="Selo vegano"></div>
+          <p>200 g de carne de plantas, temperada com sal, cebola e cebolete orgânica, páprica,
+             cachaça e azeite de oliva. A broa você escolhe no pedido. Acompanha mostarda escura
+             e azeite de oliva.</p>
         </div>
         <div class="card">
-          <div class="topo"><h3>A Vegetariana</h3><span class="selo-u">Ushuaia</span></div>
-          <p class="pend">[composição — confirmar com o César]</p>
+          <div class="topo"><h3>A Sem Glúten</h3><img class="selo-versao" src="assets/selo-sem-gluten.png" alt="Selo sem glúten"></div>
+          <p>200 g de carne fresca de patinho bovina, temperada com sal, cebola e cebolete orgânica,
+             páprica, cachaça e azeite de oliva. Na broa sem glúten, com mostarda escura e azeite
+             de oliva.</p>
         </div>
       </div>
     </div>
-
-    <div class="faixa-glu">Todas com opção de <b>broa sem glúten</b>.</div>
   </div>
 </section>
 
@@ -329,35 +376,50 @@ h1,h2,h3,h4,p,dd{overflow-wrap:anywhere}
   <div class="wrap ig">
     <div>
       <div class="kicker">Patrimônio</div>
-      <h2 class="sec-t">Curitiba tem um prato que é dela.</h2>
-      <p class="lead">Em maio de 2025, o INPI reconheceu a Carne de Onça com a
-         <b>Indicação Geográfica de Curitiba</b> — o mesmo tipo de registro que o queijo da
-         Canastra e o café do Cerrado têm. É o documento que diz, oficialmente, que este prato é daqui.</p>
-      <span class="script">E mesmo assim tem muito curitibano que nunca provou.</span>
-      <a class="link-mais" href="#blog">Entenda o que é Indicação Geográfica →</a>
-      <div class="gestora">A gestão da Indicação Geográfica é da Associação Amigos da Onça (AAOnça),
-         com apoio do Sebrae-PR.</div>
+      <h2 class="sec-t">Um sabor que é a identidade de Curitiba.</h2>
+      <p class="lead">A Carne de Onça nasceu nos bares e botecos de Curitiba entre as décadas de
+         1930 e 1940 e se popularizou a partir dos anos 1950. Apesar do nome curioso, não leva
+         carne de onça: é preparada com <b>carne bovina fresca</b>.</p>
+      <p class="lead">Em <b>2016</b>, foi reconhecida como Patrimônio Cultural de Natureza Imaterial
+         de Curitiba. Em <b>2025</b>, a Associação dos Amigos da Onça conquistou junto ao INPI o
+         reconhecimento de <b>Indicação Geográfica</b>, na modalidade Indicação de Procedência.</p>
+      <span class="script">Para os visitantes, uma descoberta. Para os curitibanos, uma tradição que continua viva.</span>
+      <a class="link-mais" href="blog/indicacao-de-procedencia.html">Entenda o que é Indicação de Procedência →</a>
+      <div class="gestora">A conquista da Indicação Geográfica é da Associação dos Amigos da Onça,
+         com apoio do Sebrae.</div>
     </div>
     <img class="img-bloco" src="assets/foto-patrimonio-3x2.jpg"
          alt="Carne de onça diante da estufa do Jardim Botânico de Curitiba, ao entardecer">
+  </div>
+  <div class="wrap">
+    <div class="postais">
+      <figure><img src="assets/cur-jb-dia.jpg" alt="Jardim Botânico, em Curitiba" loading="lazy"><figcaption>Jardim Botânico</figcaption></figure>
+      <figure><img src="assets/cur-jb-noite.jpg" alt="Jardim Botânico à noite, em Curitiba" loading="lazy"><figcaption>Jardim Botânico à noite</figcaption></figure>
+      <figure><img src="assets/cur-largo.jpg" alt="Largo da Ordem, em Curitiba" loading="lazy"><figcaption>Largo da Ordem</figcaption></figure>
+      <figure><img src="assets/cur-niemeyer.jpg" alt="Museu Niemeyer, em Curitiba" loading="lazy"><figcaption>Museu Niemeyer</figcaption></figure>
+      <figure><img src="assets/cur-opera.jpg" alt="Ópera de Arame, em Curitiba" loading="lazy"><figcaption>Ópera de Arame</figcaption></figure>
+      <figure><img src="assets/cur-tangua.jpg" alt="Parque Tanguá, em Curitiba" loading="lazy"><figcaption>Parque Tanguá</figcaption></figure>
+    </div>
   </div>
 </section>
 
 <!-- ============ QUEM FAZ ============ -->
 <section id="cesar">
   <div class="wrap cesar">
-    <div class="foto r-4-5">
-      <span>Foto 4 · César<small>retrato, ou ele trabalhando · 4:5 vertical, mín. 1200 × 1500</small></span>
-    </div>
+    <img class="img-bloco" src="assets/foto-cesar-4x5.jpg"
+         alt="César Reis, criador do Ushuaia Carne de Onça, ao piano no Ushuaia Piano Bar" loading="lazy" width="853" height="1066">
     <div>
       <div class="kicker">Quem faz</div>
-      <h2 class="sec-t">Eu sou o César.</h2>
-      <p>Foram dez anos de Ushuaia. Muita música, muita gente, muita noite. Muita gente me pergunta
-         o que aconteceu e o que eu estou fazendo agora.</p>
-      <p>Eu reinventei. Peguei o petisco que eu servia no balcão há dez anos e resolvi levar até a
-         sua casa — feito na hora, do jeito que tem que ser, e com versão para quem sempre teve que
-         dizer "eu não posso comer".</p>
-      <p style="color:var(--tinta)">Não é bar. Não é show. Mas é bem curitibano.</p>
+      <h2 class="sec-t">Quem está por trás da Carne de Onça Ushuaia.</h2>
+      <p>Antes de criar o Ushuaia Carne de Onça, César Reis percorreu <b>35 dias de motocicleta pela
+         Patagônia</b>, pela Ruta 40, atravessando as cordilheiras até chegar a Ushuaia, na Argentina.</p>
+      <p>Dois anos depois, sua paixão pela música e pela cultura curitibana deu origem ao
+         <b>Ushuaia Piano Bar</b>, espaço que, ao longo de dez anos, recebeu grandes nomes da música.</p>
+      <p>Hoje essa história ganha um novo capítulo. No modelo <b>dark kitchen</b>, César Reis e sua
+         família levam a Carne de Onça até você — com a versão original, a receita autoral do Ushuaia
+         Piano Bar, além das opções vegana e sem glúten.</p>
+      <p style="color:var(--tinta)">Uma trajetória feita de viagens, música e sabores — agora entregue
+         à mesa de Curitiba e de seus visitantes.</p>
       <div class="assina">César</div>
     </div>
   </div>
@@ -371,7 +433,7 @@ h1,h2,h3,h4,p,dd{overflow-wrap:anywhere}
 
     <div class="passos">
       <div class="passo"><div class="n">1</div><h4>Escolha a versão</h4>
-        <p>Tradicional, Ushuaia, vegana ou vegetariana — e a broa, comum ou sem glúten.</p></div>
+        <p>A Original, a do Ushuaia Piano Bar, a Vegana ou a Sem Glúten.</p></div>
       <div class="passo"><div class="n">2</div><h4>Chame no WhatsApp</h4>
         <p>Um toque abre a conversa direto. Se preferir aplicativo, estamos no iFood e no 99Food.</p></div>
       <div class="passo"><div class="n">3</div><h4>Receba e monte</h4>
@@ -379,13 +441,11 @@ h1,h2,h3,h4,p,dd{overflow-wrap:anywhere}
     </div>
 
     <dl class="dados">
-      <div><dt>Área de entrega</dt><dd class="pend">[bairros]</dd></div>
-      <div><dt>Horário</dt><dd class="pend">[dias e faixa]</dd></div>
-      <div><dt>Tempo médio</dt><dd class="pend">[minutos]</dd></div>
-      <div><dt>Pagamento</dt><dd class="pend">[formas]</dd></div>
+      <div><dt>Horário</dt><dd>Todos os dias, 18h às 24h</dd></div>
+      <div><dt>Tempo médio</dt><dd>30 a 45 minutos</dd></div>
     </dl>
 
-    <div style="margin-top:34px"><a class="btn btn-wa" data-wa="b2b" target="_blank" rel="noopener" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.14-.19.29-.74.93-.9 1.12-.17.19-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.59.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.56-.88-2.13-.23-.55-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.38s1.02 2.76 1.17 2.95c.15.19 2.02 3.08 4.89 4.32.68.29 1.21.47 1.63.6.68.22 1.31.19 1.8.11.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38c1.45.79 3.08 1.21 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.02h-.01c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.25-8.2 8.25z"/></svg>Pedir no WhatsApp</a></div>
+    <div style="margin-top:34px"><button class="btn btn-pedir" type="button" data-pedir>Fazer pedido</button></div>
   </div>
 </section>
 
@@ -395,26 +455,25 @@ h1,h2,h3,h4,p,dd{overflow-wrap:anywhere}
     <div class="kicker">Blog</div>
     <h2 class="sec-t">Para entender o que você está comendo.</h2>
     <div class="posts">
-      <a class="post" href="#">
-        <div class="foto r-16-9"><span>capa</span></div>
+      <a class="post" href="blog/o-que-e-carne-de-onca.html">
+        <img class="capa" src="assets/capa-prato.jpg" alt="Carne de onça servida em travessa, com broas e azeite" loading="lazy">
         <div class="tag">O prato</div>
         <h4>O que é Carne de Onça</h4>
-        <p>Broa de centeio, carne bovina crua moída na hora e o tempero que faz a diferença.</p>
+        <p>Broa de centeio, carne bovina fresca e o tempero que faz a diferença.</p>
       </a>
-      <a class="post" href="#">
-        <div class="foto r-16-9"><span>capa</span></div>
+      <a class="post" href="blog/indicacao-de-procedencia.html">
+        <img class="capa" src="assets/capa-ig.jpg" alt="Carne de onça diante da estufa do Jardim Botânico de Curitiba" loading="lazy">
         <div class="tag">O prato</div>
         <h4>Indicação Geográfica: o que significa esse selo</h4>
-        <p>O mesmo registro do queijo da Canastra, aplicado a um petisco de boteco curitibano.</p>
+        <p>O mesmo tipo de registro do queijo da Canastra, aplicado a um petisco de boteco curitibano.</p>
       </a>
-      <a class="post" href="#">
-        <div class="foto r-16-9"><span>capa</span></div>
+      <a class="post" href="blog/vegana-e-sem-gluten.html">
+        <img class="capa" src="assets/capa-versoes.jpg" alt="Carne de onça na travessa, com as broas ao lado" loading="lazy">
         <div class="tag">O diferencial</div>
-        <h4>Carne de onça para celíacos</h4>
-        <p>Dez anos vendo gente ter que dizer "eu não posso comer" — e como a gente resolveu.</p>
+        <h4>Carne de onça para quem achava que não podia comer</h4>
+        <p>Dez anos vendo gente ter que dizer “eu não posso comer” — e como a gente resolveu.</p>
       </a>
     </div>
-  </div>
 </section>
 
 <!-- ============ HOTÉIS ============ -->
@@ -439,8 +498,8 @@ h1,h2,h3,h4,p,dd{overflow-wrap:anywhere}
       <h5>Onde pedir</h5>
       <div class="canais-grid">
         <a class="canal canal-wa" data-wa="pedido" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.14-.19.29-.74.93-.9 1.12-.17.19-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.59.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.56-.88-2.13-.23-.55-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.38s1.02 2.76 1.17 2.95c.15.19 2.02 3.08 4.89 4.32.68.29 1.21.47 1.63.6.68.22 1.31.19 1.8.11.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38c1.45.79 3.08 1.21 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.02h-.01c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.25-8.2 8.25z"/></svg>WhatsApp</a>
-        <a class="canal canal-ifood" href="#" target="_blank" rel="noopener">iFood</a>
-        <a class="canal canal-99" href="#" target="_blank" rel="noopener">99Food</a>
+        <a class="canal canal-ifood" href="https://www.ifood.com.br/delivery/curitiba-pr/ushuaia-bar-mossungue/60570d91-92b4-4000-915f-6d7641338be6" target="_blank" rel="noopener">iFood</a>
+        <a class="canal canal-99" href="https://oia.99app.com/dlp9/58jlLS" target="_blank" rel="noopener">99Food</a>
       </div>
     </div>
 
@@ -453,8 +512,7 @@ h1,h2,h3,h4,p,dd{overflow-wrap:anywhere}
       <div>
         <h5>Contato</h5>
         <a data-wa="pedido" href="#" target="_blank" rel="noopener">(41) 99911-9195</a>
-        <a href="#" class="pend">[e-mail]</a>
-        <a href="#" class="pend">[endereço]</a>
+        <a href="mailto:ushuaiacarnedeonca@gmail.com">ushuaiacarnedeonca@gmail.com</a>
       </div>
       <div>
         <h5>Onde nos achar</h5>
@@ -463,13 +521,27 @@ h1,h2,h3,h4,p,dd{overflow-wrap:anywhere}
       </div>
     </div>
     <div class="creditoig">
-      <span>Carne de Onça é uma Indicação Geográfica de Curitiba, gerida pela Associação Amigos da Onça (AAOnça).</span>
+      <span>Carne de Onça é Patrimônio Cultural Imaterial de Curitiba (2016) e Indicação Geográfica na modalidade Indicação de Procedência (2025), conquistada pela Associação dos Amigos da Onça com apoio do Sebrae.</span>
       <span>© 2026 Ushuaia</span>
     </div>
   </div>
 </footer>
 
-<div class="barra"><a class="btn btn-wa" data-wa="pedido" target="_blank" rel="noopener" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.14-.19.29-.74.93-.9 1.12-.17.19-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.59.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.56-.88-2.13-.23-.55-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.38s1.02 2.76 1.17 2.95c.15.19 2.02 3.08 4.89 4.32.68.29 1.21.47 1.63.6.68.22 1.31.19 1.8.11.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38c1.45.79 3.08 1.21 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.02h-.01c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.25-8.2 8.25z"/></svg>Pedir no WhatsApp</a></div>
+<div class="modal" id="modal-pedido" hidden>
+  <div class="modal-bg" data-fechar></div>
+  <div class="modal-cx" role="dialog" aria-modal="true" aria-labelledby="modal-tt">
+    <button class="modal-x" type="button" data-fechar aria-label="Fechar">&times;</button>
+    <h3 id="modal-tt">Como você prefere pedir?</h3>
+    <p class="sub">Os três levam ao mesmo cardápio. Escolha o canal.</p>
+    <div class="canais-grid">
+      <a class="canal canal-wa" data-wa="pedido" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.14-.19.29-.74.93-.9 1.12-.17.19-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.59.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.56-.88-2.13-.23-.55-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.38s1.02 2.76 1.17 2.95c.15.19 2.02 3.08 4.89 4.32.68.29 1.21.47 1.63.6.68.22 1.31.19 1.8.11.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38c1.45.79 3.08 1.21 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.02h-.01c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.25-8.2 8.25z"/></svg>WhatsApp</a>
+      <a class="canal canal-ifood" href="https://www.ifood.com.br/delivery/curitiba-pr/ushuaia-bar-mossungue/60570d91-92b4-4000-915f-6d7641338be6" target="_blank" rel="noopener">iFood</a>
+      <a class="canal canal-99" href="https://oia.99app.com/dlp9/58jlLS" target="_blank" rel="noopener">99Food</a>
+    </div>
+  </div>
+</div>
+
+<div class="barra"><button class="btn btn-pedir" type="button" data-pedir>Fazer pedido</button></div>
 
 
 <script>
@@ -484,6 +556,34 @@ h1,h2,h3,h4,p,dd{overflow-wrap:anywhere}
 
   document.querySelectorAll('[data-wa]').forEach(function (a) {
     a.href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(MSG[a.dataset.wa] || MSG.pedido);
+  });
+
+  var modal = document.getElementById('modal-pedido');
+  var ultimoFoco = null;
+
+  function abrir () {
+    ultimoFoco = document.activeElement;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    modal.querySelector('.canal').focus();
+  }
+  function fechar () {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if (ultimoFoco) ultimoFoco.focus();
+  }
+
+  document.querySelectorAll('[data-pedir]').forEach(function (b) {
+    b.addEventListener('click', abrir);
+  });
+  modal.querySelectorAll('[data-fechar]').forEach(function (b) {
+    b.addEventListener('click', fechar);
+  });
+  modal.querySelectorAll('.canal').forEach(function (a) {
+    a.addEventListener('click', fechar);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) fechar();
   });
 </script>
 </body>
