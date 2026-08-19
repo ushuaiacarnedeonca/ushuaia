@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carne de Onça em Curitiba | Delivery — Ushuaia</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="O prato que tem Indicação Geográfica de Curitiba, entregue na sua casa. Quatro versões: tradicional, Ushuaia, vegana e vegetariana, com opção sem glúten.">
+<link rel="icon" href="assets/onca.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=tanker@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Yellowtail&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* paleta oficial Ushuaia */
+  --preto:#000000;
+  --vinho:#7E1A02;
+  --marrom:#74370A;
+  --caramelo:#A55404;
+  --ouro:#F79521;
+  --creme:#F5E1C9;          /* derivado do CMYK 0/8/18/4 da folha de cores */
+  /* aplicação */
+  --fundo:var(--creme);
+  --superficie:#FCF4E9;     /* creme mais claro, para cartões */
+  --tinta:#2A1403;
+  --tinta-fraca:#6E4E33;
+  --linha:rgba(126,26,2,.16);
+  --linha-forte:rgba(126,26,2,.30);
+  --display:'Tanker','Parkinsans',Impact,sans-serif;
+  --corpo:'Parkinsans','Helvetica Neue',Arial,sans-serif;
+  --script:'Yellowtail',cursive;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--fundo);color:var(--tinta);font-family:var(--corpo);
+  font-size:17px;line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:var(--display);font-weight:400;letter-spacing:.01em;
+  line-height:1.04;margin:0;color:var(--vinho)}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px;width:100%}
+
+/* ---------- marcação de foto ---------- */
+.foto{position:relative;border:1px dashed var(--linha-forte);border-radius:10px;overflow:hidden;
+  background:repeating-linear-gradient(135deg,rgba(165,84,4,.10) 0 12px,rgba(126,26,2,.06) 12px 24px);
+  display:flex;align-items:center;justify-content:center;text-align:center}
+.foto span{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--vinho);
+  padding:14px 18px;font-weight:700;line-height:1.7}
+.foto small{display:block;letter-spacing:.06em;text-transform:none;color:var(--tinta-fraca);
+  font-weight:400;font-size:11.5px;margin-top:5px}
+.foto.escura{border-color:rgba(247,149,33,.30);
+  background:repeating-linear-gradient(135deg,rgba(247,149,33,.12) 0 12px,rgba(0,0,0,.10) 12px 24px)}
+.foto.escura span{color:var(--ouro)}
+.foto.escura small{color:#D9C3AC}
+.foto-destaque{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.img-bloco{width:100%;height:auto;display:block;border-radius:12px;
+  box-shadow:0 14px 34px rgba(66,32,10,.20)}
+.r-16-9{aspect-ratio:16/9}
+.r-1-1{aspect-ratio:1/1}
+.r-4-5{aspect-ratio:4/5}
+.r-3-2{aspect-ratio:3/2}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(245,225,201,.90);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--linha)}
+header .wrap{display:flex;align-items:center;gap:28px;height:74px}
+.marca{display:flex;align-items:center;text-decoration:none;flex:0 0 auto}
+.marca img{height:73px;width:auto}
+header .wrap{height:106px}
+.logo-rodape{height:146px;width:auto;margin-bottom:18px}
+nav{margin-left:auto;display:flex;gap:26px;align-items:center}
+nav a{font-size:14px;text-decoration:none;color:var(--tinta-fraca);transition:color .2s;font-weight:500}
+nav a:hover{color:var(--vinho)}
+.btn{display:inline-block;background:var(--vinho);color:#FDF6EC;font-weight:700;
+  padding:13px 26px;border-radius:999px;text-decoration:none;font-size:15px;
+  letter-spacing:.02em;transition:transform .15s,filter .2s;white-space:nowrap}
+.btn:hover{filter:brightness(1.15);transform:translateY(-1px)}
+.btn-ouro{background:var(--ouro);color:#2A1403}
+.btn-linha{background:transparent;color:var(--ouro);border:1.5px solid var(--ouro)}
+.btn{display:inline-flex;align-items:center;gap:9px}
+.btn svg{width:18px;height:18px;flex:0 0 auto;fill:currentColor}
+.btn-wa{background:#25D366;color:#06331A}
+.btn-wa:hover{filter:brightness(1.06)}
+.barra .btn{display:flex;justify-content:center}
+@media(max-width:860px){nav a:not(.btn){display:none}}
+
+/* ---------- hero ---------- */
+.kicker{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--caramelo);
+  font-weight:700;margin-bottom:20px}
+.hero{position:relative;background:#1A0E05 url('assets/foto-hero-1600.jpg') right center/cover no-repeat;
+  border-bottom:1px solid var(--linha);overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(20,9,3,.94) 0%,rgba(20,9,3,.88) 26%,
+             rgba(20,9,3,.55) 48%,rgba(20,9,3,.12) 68%,rgba(20,9,3,0) 84%)}
+.hero .wrap{position:relative;z-index:1;min-height:600px;display:flex;align-items:center;
+  padding-top:78px;padding-bottom:78px}
+.hero .texto{max-width:600px}
+.hero .kicker{color:var(--ouro)}
+.hero h1{font-size:clamp(42px,6vw,72px);margin-bottom:22px;color:#FBEEDC;
+  text-shadow:0 2px 22px rgba(0,0,0,.45)}
+.hero p{font-size:19px;color:#E3D0BC;max-width:30em;margin:0 0 30px}
+.hero .info{margin-top:22px;font-size:13.5px;color:#C6AE95;letter-spacing:.03em}
+.hero .info b{color:#FBEEDC;font-weight:700}
+.hero .pend{color:var(--ouro);border-bottom-color:var(--ouro)}
+@media(max-width:860px){
+  .hero{background-image:url('assets/foto-hero-900.jpg');background-position:72% center}
+  .hero::before{background:linear-gradient(180deg,rgba(20,9,3,.94) 0%,rgba(20,9,3,.90) 44%,
+                rgba(20,9,3,.62) 72%,rgba(20,9,3,.28) 100%)}
+  .hero .wrap{min-height:0;padding-top:52px;padding-bottom:190px;align-items:flex-start}
+}
+
+/* ---------- seções ---------- */
+section{padding:82px 0;border-bottom:1px solid var(--linha)}
+.sec-t{font-size:clamp(30px,4.2vw,46px);margin-bottom:16px;max-width:16em}
+.sec-i{color:var(--tinta-fraca);max-width:42em;font-size:17.5px;margin:0 0 40px}
+
+/* ---------- as quatro versões ---------- */
+.versoes{display:grid;grid-template-columns:1.15fr 1fr;gap:26px;align-items:stretch}
+.destaque{background:linear-gradient(160deg,var(--marrom),#42200A);border:1px solid var(--marrom);
+  border-radius:16px;overflow:hidden;display:flex;flex-direction:column;
+  box-shadow:0 14px 34px rgba(66,32,10,.20)}
+.destaque .corpo{padding:26px 28px 30px;flex:1;display:flex;flex-direction:column;justify-content:center}
+.destaque h3{font-size:34px;margin-bottom:6px;color:#FDF1E2}
+.destaque .ing{color:#DCC6AE;font-size:16px;margin:10px 0 0}
+.selo-ig{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--ouro);
+  border-radius:999px;padding:7px 15px 7px 9px;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ouro);font-weight:700;margin-top:20px}
+.selo-ig .mk{width:22px;height:22px;border-radius:50%;border:1px dashed var(--ouro);
+  display:grid;place-items:center;font-size:8px;letter-spacing:0}
+.trio{display:grid;gap:16px;grid-template-rows:repeat(3,1fr)}
+.card{background:var(--superficie);border:1px solid var(--linha);
+  border-radius:14px;padding:22px 24px;transition:border-color .2s,transform .2s,box-shadow .2s;
+  display:flex;flex-direction:column;justify-content:center}
+.card:hover{border-color:var(--caramelo);transform:translateY(-2px);
+  box-shadow:0 8px 22px rgba(126,26,2,.10)}
+.card .topo{display:flex;align-items:baseline;justify-content:space-between;gap:14px}
+.card h3{font-size:26px}
+.card .selo-u{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--vinho);
+  border:1px solid var(--linha-forte);border-radius:999px;padding:4px 11px;
+  font-weight:700;white-space:nowrap;flex:0 0 auto;background:rgba(247,149,33,.16)}
+.card p{color:var(--tinta-fraca);font-size:15.5px;margin:9px 0 0}
+.faixa-glu{margin-top:26px;background:rgba(247,149,33,.20);border:1px solid var(--linha-forte);
+  border-radius:12px;padding:18px 24px;font-size:17px;text-align:center}
+.faixa-glu b{color:var(--vinho)}
+@media(max-width:900px){.versoes{grid-template-columns:1fr}.trio{grid-template-rows:none}}
+
+/* ---------- patrimônio ---------- */
+.ig{display:grid;grid-template-columns:1fr .8fr;gap:52px;align-items:center}
+.ig p{color:var(--tinta-fraca);font-size:17.5px}
+.ig .lead{color:var(--tinta);font-size:20px}
+.script{font-family:var(--script);font-size:30px;color:var(--caramelo);line-height:1.35;
+  margin:26px 0;display:block}
+.link-mais{display:inline-block;margin-top:8px;color:var(--vinho);text-decoration:none;
+  font-weight:700;font-size:15px;border-bottom:1px solid var(--linha-forte);padding-bottom:2px}
+.gestora{margin-top:26px;font-size:13.5px;color:var(--tinta-fraca);
+  border-left:2px solid var(--ouro);padding-left:16px}
+@media(max-width:900px){.ig{grid-template-columns:1fr;gap:34px}}
+
+/* ---------- quem faz ---------- */
+.cesar{display:grid;grid-template-columns:.8fr 1fr;gap:52px;align-items:center}
+.cesar p{color:var(--tinta-fraca);font-size:17.5px}
+.cesar .assina{font-family:var(--script);font-size:34px;color:var(--caramelo);margin-top:22px}
+@media(max-width:900px){.cesar{grid-template-columns:1fr;gap:34px}}
+
+/* ---------- como pedir ---------- */
+.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:36px}
+.passo{border:1px solid var(--linha);background:var(--superficie);border-radius:14px;padding:24px}
+.passo .n{width:38px;height:38px;border-radius:50%;background:var(--ouro);color:#2A1403;
+  display:grid;place-items:center;font-family:var(--display);font-size:19px;margin-bottom:14px}
+.passo h4{font-family:var(--display);font-weight:400;font-size:21px;margin:0 0 6px;color:var(--vinho)}
+.passo p{margin:0;color:var(--tinta-fraca);font-size:15px}
+.dados{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--linha-forte);
+  border:1px solid var(--linha-forte);border-radius:12px;overflow:hidden}
+.dados div{background:var(--superficie);padding:20px 22px}
+.dados dt{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--caramelo);
+  font-weight:700;margin-bottom:6px}
+.dados dd{margin:0;font-size:16px}
+@media(max-width:900px){.passos{grid-template-columns:1fr}.dados{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.dados{grid-template-columns:1fr}}
+
+/* ---------- blog ---------- */
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.post{text-decoration:none;display:block}
+.post h4{font-family:var(--display);font-weight:400;font-size:22px;margin:16px 0 7px;
+  line-height:1.15;color:var(--vinho)}
+.post p{margin:0;color:var(--tinta-fraca);font-size:14.5px}
+.post .tag{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--caramelo);font-weight:700}
+@media(max-width:860px){.posts{grid-template-columns:1fr}}
+
+/* ---------- hotéis ---------- */
+.b2b{background:linear-gradient(120deg,var(--vinho),#4A0F01);border-radius:18px;
+  padding:44px 46px;display:grid;grid-template-columns:1fr auto;gap:34px;align-items:center;
+  box-shadow:0 14px 34px rgba(74,15,1,.20)}
+.b2b h2{font-size:32px;margin-bottom:10px;color:#FDF1E2}
+.b2b p{margin:0;color:#EBD6C4;max-width:44em}
+@media(max-width:860px){.b2b{grid-template-columns:1fr;padding:32px 26px}}
+
+/* ---------- rodapé ---------- */
+footer{background:#2A1403;color:#D9C3AC;padding:56px 0 120px;font-size:14px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;margin-bottom:34px}
+footer h5{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ouro);
+  margin:0 0 12px;font-weight:700;font-family:var(--corpo)}
+footer a{text-decoration:none;display:block;margin-bottom:7px}
+footer a:hover{color:var(--ouro)}
+.canais{border-top:1px solid rgba(247,149,33,.22);border-bottom:1px solid rgba(247,149,33,.22);
+  padding:26px 0;margin-bottom:32px}
+.canais-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.canal{display:flex;align-items:center;justify-content:center;gap:10px;height:56px;
+  border-radius:12px;text-decoration:none;font-weight:800;font-size:16px;
+  letter-spacing:-.01em;transition:transform .15s,filter .2s}
+.canal:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.canal svg{width:19px;height:19px;fill:currentColor}
+.canal-wa{background:#25D366;color:#06331A}
+.canal-ifood{background:#EA1D2C;color:#fff}
+.canal-99{background:#FFE000;color:#111}
+@media(max-width:700px){.canais-grid{grid-template-columns:1fr}}
+.creditoig{border-top:1px solid rgba(247,149,33,.22);padding-top:22px;font-size:12.5px;
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#B9A18A}
+@media(max-width:860px){.f-grid{grid-template-columns:1fr;gap:26px}}
+
+/* ---------- barra fixa mobile ---------- */
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;
+  background:rgba(245,225,201,.96);backdrop-filter:blur(10px);
+  border-top:1px solid var(--linha-forte);padding:12px 20px}
+.barra .btn{display:block;text-align:center}
+@media(max-width:860px){.barra{display:block}}
+
+/* ---------- protótipo / pendências ---------- */
+.pend{color:var(--caramelo);border-bottom:1px dotted var(--caramelo);cursor:help}
+.destaque .pend,.b2b .pend{color:var(--ouro);border-bottom-color:var(--ouro)}
+
+/* ---------- responsivo ---------- */
+.versoes>*,.ig>*,.cesar>*,.b2b>*,.trio>*,.destaque>*{min-width:0}
+h1,h2,h3,h4,p,dd{overflow-wrap:anywhere}
+@media(max-width:860px){
+  header .wrap{gap:12px;height:88px}
+  .marca img{height:59px}
+  .logo-rodape{height:104px}
+  .btn{padding:11px 18px;font-size:14px}
+  .sec-t{max-width:none}
+  .hero p{max-width:none}
+  .hero .texto{max-width:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="marca" href="#">
+      <img src="assets/logo-header.png" alt="Ushuaia Carne de Onça — Gastronomia Curitibana">
+    </a>
+    <nav>
+      <a href="#versoes">As versões</a>
+      <a href="#prato">O prato</a>
+      <a href="#cesar">Quem faz</a>
+      <a href="#pedir">Como pedir</a>
+      <a href="#blog">Blog</a>
+      <a class="btn btn-wa" data-wa="pedido" target="_blank" rel="noopener" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.14-.19.29-.74.93-.9 1.12-.17.19-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.59.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.56-.88-2.13-.23-.55-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.38s1.02 2.76 1.17 2.95c.15.19 2.02 3.08 4.89 4.32.68.29 1.21.47 1.63.6.68.22 1.31.19 1.8.11.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38c1.45.79 3.08 1.21 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.02h-.01c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.25-8.2 8.25z"/></svg>Pedir no WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap">
+    <div class="texto">
+      <div class="kicker">Delivery em Curitiba</div>
+      <h1>Carne de Onça,<br>entregue na<br>sua casa.</h1>
+      <p>O petisco que é patrimônio da cidade: broa de centeio, carne fresca moída na hora,
+         cebolinha, cebola e tempero. Dez anos no balcão do Ushuaia — agora na sua mesa.</p>
+      <a class="btn btn-wa" data-wa="pedido" target="_blank" rel="noopener" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.14-.19.29-.74.93-.9 1.12-.17.19-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.59.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.56-.88-2.13-.23-.55-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.38s1.02 2.76 1.17 2.95c.15.19 2.02 3.08 4.89 4.32.68.29 1.21.47 1.63.6.68.22 1.31.19 1.8.11.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38c1.45.79 3.08 1.21 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.02h-.01c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.25-8.2 8.25z"/></svg>Pedir no WhatsApp</a>
+      <div class="info">
+        Entrega em <b class="pend">[regiões]</b> · <b class="pend">[dias e horário]</b> ·
+        pedido mínimo <b class="pend">[valor]</b>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ AS QUATRO VERSÕES ============ -->
+<section id="versoes">
+  <div class="wrap">
+    <h2 class="sec-t">Quatro versões. Porque o prato é da cidade inteira.</h2>
+    <p class="sec-i">Em dez anos de balcão, eu vi muita gente pedir e ter que recusar. Celíaco,
+       vegano, vegetariano. Sempre me incomodou — o prato é de Curitiba, e Curitiba é de todo mundo.
+       Então eu fiz de outro jeito.</p>
+
+    <div class="versoes">
+      <div class="destaque">
+        <img class="foto-destaque" src="assets/foto-tradicional-1x1.jpg"
+             alt="A Tradicional — carne de onça sobre broa de centeio, com cebola e cebolinha verde">
+        <div class="corpo">
+          <h3>A Tradicional</h3>
+          <p class="ing">Como sempre foi feita: 200 g de carne bovina fresca — patinho —, cebola,
+             cebolinha verde, sal e pimenta do reino. Acompanha broa de centeio, mostarda escura
+             e azeite de oliva.</p>
+          <div class="selo-ig"><span class="mk">SELO</span> Indicação Geográfica de Curitiba</div>
+        </div>
+      </div>
+
+      <div class="trio">
+        <div class="card">
+          <div class="topo"><h3>A Ushuaia</h3></div>
+          <p>200 g de patinho temperado com páprica, sal, azeite de oliva e cachaça orgânica.
+             Acompanha broa de castanha ou centeio, mostarda escura e azeite.</p>
+        </div>
+        <div class="card">
+          <div class="topo"><h3>A Vegana</h3><span class="selo-u">Ushuaia</span></div>
+          <p>200 g de proteína 100% vegetal com o mesmo tempero da casa — páprica, sal, azeite
+             e cachaça orgânica. Acompanha broa de castanha ou centeio, mostarda escura e azeite.
+             Sem nenhum ingrediente de origem animal.</p>
+        </div>
+        <div class="card">
+          <div class="topo"><h3>A Vegetariana</h3><span class="selo-u">Ushuaia</span></div>
+          <p class="pend">[composição — confirmar com o César]</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faixa-glu">Todas com opção de <b>broa sem glúten</b>.</div>
+  </div>
+</section>
+
+<!-- ============ O PRATO ============ -->
+<section id="prato">
+  <div class="wrap ig">
+    <div>
+      <div class="kicker">Patrimônio</div>
+      <h2 class="sec-t">Curitiba tem um prato que é dela.</h2>
+      <p class="lead">Em maio de 2025, o INPI reconheceu a Carne de Onça com a
+         <b>Indicação Geográfica de Curitiba</b> — o mesmo tipo de registro que o queijo da
+         Canastra e o café do Cerrado têm. É o documento que diz, oficialmente, que este prato é daqui.</p>
+      <span class="script">E mesmo assim tem muito curitibano que nunca provou.</span>
+      <a class="link-mais" href="#blog">Entenda o que é Indicação Geográfica →</a>
+      <div class="gestora">A gestão da Indicação Geográfica é da Associação Amigos da Onça (AAOnça),
+         com apoio do Sebrae-PR.</div>
+    </div>
+    <img class="img-bloco" src="assets/foto-patrimonio-3x2.jpg"
+         alt="Carne de onça diante da estufa do Jardim Botânico de Curitiba, ao entardecer">
+  </div>
+</section>
+
+<!-- ============ QUEM FAZ ============ -->
+<section id="cesar">
+  <div class="wrap cesar">
+    <div class="foto r-4-5">
+      <span>Foto 4 · César<small>retrato, ou ele trabalhando · 4:5 vertical, mín. 1200 × 1500</small></span>
+    </div>
+    <div>
+      <div class="kicker">Quem faz</div>
+      <h2 class="sec-t">Eu sou o César.</h2>
+      <p>Foram dez anos de Ushuaia. Muita música, muita gente, muita noite. Muita gente me pergunta
+         o que aconteceu e o que eu estou fazendo agora.</p>
+      <p>Eu reinventei. Peguei o petisco que eu servia no balcão há dez anos e resolvi levar até a
+         sua casa — feito na hora, do jeito que tem que ser, e com versão para quem sempre teve que
+         dizer "eu não posso comer".</p>
+      <p style="color:var(--tinta)">Não é bar. Não é show. Mas é bem curitibano.</p>
+      <div class="assina">César</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO PEDIR ============ -->
+<section id="pedir">
+  <div class="wrap">
+    <div class="kicker">Como pedir</div>
+    <h2 class="sec-t">Três passos e está a caminho.</h2>
+
+    <div class="passos">
+      <div class="passo"><div class="n">1</div><h4>Escolha a versão</h4>
+        <p>Tradicional, Ushuaia, vegana ou vegetariana — e a broa, comum ou sem glúten.</p></div>
+      <div class="passo"><div class="n">2</div><h4>Chame no WhatsApp</h4>
+        <p>Um toque abre a conversa direto. Se preferir aplicativo, estamos no iFood e no 99Food.</p></div>
+      <div class="passo"><div class="n">3</div><h4>Receba e monte</h4>
+        <p>Chega montado ou com os ingredientes separados, do jeito que você preferir.</p></div>
+    </div>
+
+    <dl class="dados">
+      <div><dt>Área de entrega</dt><dd class="pend">[bairros]</dd></div>
+      <div><dt>Horário</dt><dd class="pend">[dias e faixa]</dd></div>
+      <div><dt>Tempo médio</dt><dd class="pend">[minutos]</dd></div>
+      <div><dt>Pagamento</dt><dd class="pend">[formas]</dd></div>
+    </dl>
+
+    <div style="margin-top:34px"><a class="btn btn-wa" data-wa="b2b" target="_blank" rel="noopener" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.14-.19.29-.74.93-.9 1.12-.17.19-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.59.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.56-.88-2.13-.23-.55-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.38s1.02 2.76 1.17 2.95c.15.19 2.02 3.08 4.89 4.32.68.29 1.21.47 1.63.6.68.22 1.31.19 1.8.11.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38c1.45.79 3.08 1.21 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.02h-.01c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.25-8.2 8.25z"/></svg>Pedir no WhatsApp</a></div>
+  </div>
+</section>
+
+<!-- ============ BLOG ============ -->
+<section id="blog">
+  <div class="wrap">
+    <div class="kicker">Blog</div>
+    <h2 class="sec-t">Para entender o que você está comendo.</h2>
+    <div class="posts">
+      <a class="post" href="#">
+        <div class="foto r-16-9"><span>capa</span></div>
+        <div class="tag">O prato</div>
+        <h4>O que é Carne de Onça</h4>
+        <p>Broa de centeio, carne bovina crua moída na hora e o tempero que faz a diferença.</p>
+      </a>
+      <a class="post" href="#">
+        <div class="foto r-16-9"><span>capa</span></div>
+        <div class="tag">O prato</div>
+        <h4>Indicação Geográfica: o que significa esse selo</h4>
+        <p>O mesmo registro do queijo da Canastra, aplicado a um petisco de boteco curitibano.</p>
+      </a>
+      <a class="post" href="#">
+        <div class="foto r-16-9"><span>capa</span></div>
+        <div class="tag">O diferencial</div>
+        <h4>Carne de onça para celíacos</h4>
+        <p>Dez anos vendo gente ter que dizer "eu não posso comer" — e como a gente resolveu.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOTÉIS ============ -->
+<section>
+  <div class="wrap">
+    <div class="b2b">
+      <div>
+        <h2>O seu hóspede quer provar o prato da cidade.</h2>
+        <p>Carne de Onça é a primeira coisa que um visitante ouve falar quando pergunta o que comer
+           em Curitiba — e o que ele mais tem dificuldade de encontrar. Atendemos hotéis, pousadas
+           e eventos com formato e volume combinados.</p>
+      </div>
+      <a class="btn btn-wa" data-wa="b2b" target="_blank" rel="noopener" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.14-.19.29-.74.93-.9 1.12-.17.19-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.59.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.56-.88-2.13-.23-.55-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.38s1.02 2.76 1.17 2.95c.15.19 2.02 3.08 4.89 4.32.68.29 1.21.47 1.63.6.68.22 1.31.19 1.8.11.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38c1.45.79 3.08 1.21 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.02h-.01c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.25-8.2 8.25z"/></svg>Falar sobre parceria</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RODAPÉ ============ -->
+<footer>
+  <div class="wrap">
+    <div class="canais">
+      <h5>Onde pedir</h5>
+      <div class="canais-grid">
+        <a class="canal canal-wa" data-wa="pedido" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.14-.19.29-.74.93-.9 1.12-.17.19-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.59.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.56-.88-2.13-.23-.55-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.38s1.02 2.76 1.17 2.95c.15.19 2.02 3.08 4.89 4.32.68.29 1.21.47 1.63.6.68.22 1.31.19 1.8.11.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38c1.45.79 3.08 1.21 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.02h-.01c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.25-8.2 8.25z"/></svg>WhatsApp</a>
+        <a class="canal canal-ifood" href="#" target="_blank" rel="noopener">iFood</a>
+        <a class="canal canal-99" href="#" target="_blank" rel="noopener">99Food</a>
+      </div>
+    </div>
+
+    <div class="f-grid">
+      <div>
+        <img class="logo-rodape" src="assets/logo-horizontal-s-caramelo.png"
+             alt="Ushuaia Carne de Onça — Gastronomia Curitibana">
+        <div>Ushuaia Carne de Onça Delivery<br>CNPJ 26.558.741/0001-86</div>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <a data-wa="pedido" href="#" target="_blank" rel="noopener">(41) 99911-9195</a>
+        <a href="#" class="pend">[e-mail]</a>
+        <a href="#" class="pend">[endereço]</a>
+      </div>
+      <div>
+        <h5>Onde nos achar</h5>
+        <a href="#">Instagram</a>
+        <a href="#">Google Meu Negócio</a>
+      </div>
+    </div>
+    <div class="creditoig">
+      <span>Carne de Onça é uma Indicação Geográfica de Curitiba, gerida pela Associação Amigos da Onça (AAOnça).</span>
+      <span>© 2026 Ushuaia</span>
+    </div>
+  </div>
+</footer>
+
+<div class="barra"><a class="btn btn-wa" data-wa="pedido" target="_blank" rel="noopener" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.14-.19.29-.74.93-.9 1.12-.17.19-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.59.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.56-.88-2.13-.23-.55-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.38s1.02 2.76 1.17 2.95c.15.19 2.02 3.08 4.89 4.32.68.29 1.21.47 1.63.6.68.22 1.31.19 1.8.11.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38c1.45.79 3.08 1.21 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.02h-.01c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.25-8.2 8.25z"/></svg>Pedir no WhatsApp</a></div>
+
+
+<script>
+  /*  Número do WhatsApp — formato internacional, só dígitos.
+      (41) 99911-9195  →  5541999119195                        */
+  const WHATSAPP = '5541999119195';
+
+  const MSG = {
+    pedido: 'Olá! Vim pelo site e quero fazer um pedido.',
+    b2b:    'Olá! Sou de um hotel e queria falar sobre parceria.'
+  };
+
+  document.querySelectorAll('[data-wa]').forEach(function (a) {
+    a.href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(MSG[a.dataset.wa] || MSG.pedido);
+  });
+</script>
+</body>
+</html>
