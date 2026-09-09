@@ -4,14 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Carne de Onça em Curitiba | Delivery — Ushuaia</title>
+<link rel="canonical" href="https://www.ushuaiacarnedeonca.com.br/">
+<link rel="alternate" hreflang="pt-BR" href="https://www.ushuaiacarnedeonca.com.br/">
+<link rel="alternate" hreflang="en" href="https://www.ushuaiacarnedeonca.com.br/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.ushuaiacarnedeonca.com.br/">
 <meta name="description" content="O primeiro delivery exclusivo de Carne de Onça de Curitiba. Quatro versões: a Original com Indicação Geográfica, a autoral do Ushuaia Piano Bar, a Vegana e a Sem Glúten.">
 <link rel="icon" href="assets/icone-64.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/icone-180.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ushuaia Carne de Onça — o primeiro delivery exclusivo de Curitiba">
 <meta property="og:description" content="Quatro versões: a Original com Indicação de Procedência, a autoral do Ushuaia Piano Bar, a Vegana e a Sem Glúten.">
-<meta property="og:image" content="https://mktcastro-bit.github.io/ushuaia/assets/compartilhar.jpg">
-<meta property="og:url" content="https://mktcastro-bit.github.io/ushuaia/">
+<meta property="og:image" content="https://www.ushuaiacarnedeonca.com.br/assets/compartilhar.jpg">
+<meta property="og:url" content="https://www.ushuaiacarnedeonca.com.br/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,6 +83,9 @@ header .wrap{height:106px}
 nav{margin-left:auto;display:flex;gap:26px;align-items:center}
 nav a{font-size:14px;text-decoration:none;color:var(--tinta-fraca);transition:color .2s;font-weight:500}
 nav a:hover{color:var(--vinho)}
+.idiomas{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:700;color:var(--tinta-fraca)}
+.idiomas a{font-size:12px;font-weight:700;color:var(--tinta-fraca)}
+.idiomas a[aria-current="page"]{color:var(--vinho)}
 .btn{display:inline-block;background:var(--vinho);color:#FDF6EC;font-weight:700;
   padding:13px 26px;border-radius:999px;text-decoration:none;font-size:15px;
   letter-spacing:.02em;transition:transform .15s,filter .2s;white-space:nowrap}
@@ -91,6 +98,7 @@ nav a:hover{color:var(--vinho)}
 .btn-wa:hover{filter:brightness(1.06)}
 .barra .btn{display:flex;justify-content:center}
 @media(max-width:860px){nav a:not(.btn){display:none}}
+@media(max-width:860px){nav .idiomas a{display:inline}}
 
 /* ---------- hero ---------- */
 .kicker{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--caramelo);
@@ -313,6 +321,7 @@ h1,h2,h3,h4,p,dd{overflow-wrap:anywhere}
       <a href="#cesar">Quem faz</a>
       <a href="#pedir">Como pedir</a>
       <a href="#blog">Blog</a>
+      <span class="idiomas" aria-label="Selecionar idioma"><a href="/" lang="pt-BR" aria-current="page">PT</a><span>|</span><a href="/en/" lang="en">EN</a></span>
       <button class="btn btn-pedir" type="button" data-pedir>Fazer pedido</button>
     </nav>
   </div>
