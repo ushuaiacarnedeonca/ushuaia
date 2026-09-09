@@ -44,7 +44,6 @@ do link. São **cinco lugares**:
 | `index.html` | 14 | `og:image` |
 | `index.html` | 15 | `og:url` |
 | `blog/o-que-e-carne-de-onca.html` | 14 | `og:image` |
-| `blog/indicacao-de-procedencia.html` | 14 | `og:image` |
 | `blog/vegana-e-sem-gluten.html` | 14 | `og:image` |
 
 Troque `https://mktcastro-bit.github.io/ushuaia/` pelo **domínio final**. Se não trocar,
